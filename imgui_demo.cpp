@@ -82,6 +82,7 @@ Index of this file:
 // Visual Studio warnings
 #ifdef _MSC_VER
 #pragma warning (disable: 4996) // 'This function or variable may be unsafe': strcpy, strdup, sprintf, vsnprintf, sscanf, fopen
+IMGUI_COMPILER_RUNTIME_CHECKS_OFF();
 #endif
 
 // Clang/GCC warnings with -Weverything
@@ -5428,5 +5429,7 @@ void ImGui::ShowUserGuide() {}
 void ImGui::ShowStyleEditor(ImGuiStyle*) {}
 
 #endif
+
+IMGUI_COMPILER_RUNTIME_CHECKS_ON();
 
 #endif // #ifndef IMGUI_DISABLE
