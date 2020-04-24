@@ -47,7 +47,8 @@ IMGUI_IMPL_API bool     ImGui_ImplVulkan_Init(ImGui_ImplVulkan_InitInfo* info, V
 IMGUI_IMPL_API void     ImGui_ImplVulkan_Shutdown();
 IMGUI_IMPL_API void     ImGui_ImplVulkan_NewFrame();
 IMGUI_IMPL_API void     ImGui_ImplVulkan_RenderDrawData(ImDrawData* draw_data, VkCommandBuffer command_buffer, VkPipeline pipeline = VK_NULL_HANDLE);
-IMGUI_IMPL_API bool     ImGui_ImplVulkan_CreateFontsTexture(VkCommandBuffer command_buffer);
+IMGUI_IMPL_API void     ImGui_ImplVulkan_UpdateFontsTexture(VkCommandBuffer command_buffer); // This should be called when the font texture needs updating (if ImGuiBackendFlags_RendererHasTexReload was set)
+>>>>>>> 2e90f09a7... Shadows, Backends: added font texture updating support for DX9-DX12 and Vulkan. (experimental)
 IMGUI_IMPL_API void     ImGui_ImplVulkan_DestroyFontUploadObjects();
 IMGUI_IMPL_API void     ImGui_ImplVulkan_SetMinImageCount(uint32_t min_image_count); // To override MinImageCount after initialization (e.g. if swap chain is recreated)
 
